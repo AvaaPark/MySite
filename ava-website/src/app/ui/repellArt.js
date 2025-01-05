@@ -46,9 +46,8 @@ class Particle {
 
     draw() {
         this.ctx.fillStyle = "black";
-        console.log('this: ', this);
-        // this.ctx.fillText(this.letter, this.x, this.y, this.size, this.size);
-        this.ctx.fillText(this.letter, 50, 50, 50, 50);
+        this.ctx.fillText(this.letter, this.x, this.y);
+        console.log(this);
     }
 }
 
@@ -77,9 +76,10 @@ const initParticles = (canvas, ctx) => {
     // let mouseX = null;
     // let mouseY = null;
     
-    // canvas.addEventListener("mousemove", () => {
-
-    // })
+    canvas.addEventListener("mousemove", (e) => {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+    })
 
     letters.forEach(letter => {
         particles.push(new Particle(letter, 40, 100, 0, 0, letter, canvas, ctx));
