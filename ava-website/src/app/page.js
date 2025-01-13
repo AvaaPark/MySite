@@ -1,7 +1,10 @@
+'use client'
+
 // import Image from "next/image";
 import styles from '@/app/styles/styles.module.css';
 import { PT_Serif } from 'next/font/google';
 import RepelArt from '@/app/ui/repellArt';
+import * as motion from 'motion/react-client';
 
 const ptSerif = PT_Serif({
   variable: '--font-pt-serif',
@@ -15,7 +18,12 @@ export default function Home() {
       <div className={styles.landing}>
         <div className={`${styles.landingName} ${ptSerif.className}`}>Ava Park</div>
       </div>
-      <RepelArt />
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        onHoverStart={() => console.log('hover started!')}
+      >Yo</motion.button>
+      {/* <RepelArt /> */}
     </>
   );
 }

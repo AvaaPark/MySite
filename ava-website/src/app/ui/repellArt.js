@@ -69,12 +69,10 @@ const animate = (canvas, ctx, particles) => {
 };
 
 const initParticles = (canvas, ctx) => {
-    const letters = ['A'];
+    const letters = ['A', 'V', 'A'];
     const particles = [];
     const numLetters = 100;
     const SPEED_MULTIPLIER = 0.5;
-    // let mouseX = null;
-    // let mouseY = null;
     
     canvas.addEventListener("mousemove", (e) => {
         mouseX = e.pageX;
@@ -95,7 +93,9 @@ export default function repelArt() {
         const canvas = document.getElementById('canvas');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        const ratio = Math.ceil(window.devicePixelRatio);
         const ctx = canvas.getContext('2d');
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
         ctx.font = "48px serif";
 
         initParticles(canvas, ctx);
