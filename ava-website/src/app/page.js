@@ -3,7 +3,6 @@
 // import Image from "next/image";
 import styles from '@/app/styles/styles.module.css';
 import { PT_Serif } from 'next/font/google';
-import RepelArt from '@/app/ui/repellArt';
 import * as motion from 'motion/react-client';
 
 const ptSerif = PT_Serif({
@@ -16,14 +15,13 @@ export default function Home() {
   return (
     <>
       <div className={styles.landing}>
-        <div className={`${styles.landingName} ${ptSerif.className}`}>Ava Park</div>
+        <div className={`${styles.landingName} ${ptSerif.className}`}>Rebecca Park</div>
       </div>
-      <motion.button
+      {/* <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onHoverStart={() => console.log('hover started!')}
-      >Yo</motion.button>
-      {/* <RepelArt /> */}
+      >Yo</motion.button> */}
     </>
   );
 }
