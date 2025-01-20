@@ -1,8 +1,12 @@
 .navigation {
     align-items: end;
-    margin-left: 10px;
 }
 
 .menu {
     padding-right: 10px;
+    color: #a1a1a1;
+}
+
+.menuActive, .menu:hover {
+    color: #171717;
 }

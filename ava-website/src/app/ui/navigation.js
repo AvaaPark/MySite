@@ -24,15 +24,14 @@ const links = [
 
 export default function Navigation() {
     const path = usePathname();
-    console.log('path: ', path);
     return(
-        <div className="flex mb-5">
+        <div className="flex items-center justify-around">
             <Logo />
             <div className={`flex ${styles.navigation}`}>
                 {links.map(link => (
                     <Link
                         className={clsx(styles.menu, {
-                            "font-semibold": path === link.href    
+                            [styles.menuActive]: path === link.href
                         })}
                         key={link.name}
                         href={link.href}

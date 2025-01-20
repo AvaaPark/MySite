@@ -7,12 +7,14 @@ import { useGSAP } from '@gsap/react';
 export default function Logo() {
     useGSAP(() => {
         gsap.to("#logo", {
-            rotation: "+=360"
+            opacity: 1,
+            duration: "1.5",
+            ease: "power1.in"
         })
     });
     
     return(
         <div id="logo" className={`${styles.logo}`}>
-            <p>Ava<br/>Park</p>
+            Rebecca Park
         </div>);
 };

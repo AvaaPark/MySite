@@ -15,13 +15,8 @@ export default function Home() {
   return (
     <>
       <div className={styles.landing}>
-        <div className={`${styles.landingName} ${ptSerif.className}`}>Rebecca Park</div>
+        {/* <div className={`${styles.landingName} ${ptSerif.className}`}>Rebecca Park</div> */}
       </div>
-      {/* <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onHoverStart={() => console.log('hover started!')}
-      >Yo</motion.button> */}
     </>
   );
 }
