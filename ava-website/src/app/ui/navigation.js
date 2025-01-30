@@ -8,10 +8,10 @@ import styles from '@/app/styles/navigation.module.css';
 
 
 const links = [
-    {
-        name: "About",
-        href: "/about",
-    },
+    // {
+    //     name: "About",
+    //     href: "/about",
+    // },
     {
         name: "Work",
         href: "/work"
@@ -25,7 +25,7 @@ const links = [
 export default function Navigation() {
     const path = usePathname();
     return(
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-around mb-6">
             <Logo />
             <div className={`flex ${styles.navigation}`}>
                 {links.map(link => (

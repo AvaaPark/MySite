@@ -1,0 +1,46 @@
+.landing {
+    display: flex;
+    width: 100%;
+}
+
+.landingVideo {
+    left: 0;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.landingTextWrapper {
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    font-size: 5rem;
+    width: 100%;
+}
+
+.landingText {
+    color: var(--pet-color-light);
+    font-weight: bold;
+    margin-top: 150px;
+    margin-left: 50px;
+    transform: translateY(100px);
+}
+
+.navigation {
+    position: absolute;
+    width: 100%;
+    /* backdrop-filter: blur(0); */
+}
+
+.logo {
+    stroke: var(--pet-color-light);
+    width: 90px;
+    height: 90px;
+    /* background: url(/bork-box/bork-box-just-dog.svg); */
+    background-size: 90px 90px;
+    margin: auto;
+}
+
+.info {
+    background-color: var(--pet-primary-color);
+}
+
